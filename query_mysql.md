@@ -15,43 +15,35 @@
 
 # Soluzioni
 
-1. 
-SELECT name, surname, date_of_birth AS year
+1. SELECT name, surname, date_of_birth AS year
 FROM `students`
 WHERE YEAR(date_of_birth) = 1990;
 
-2. 
-SELECT cfu AS `cfu>10`
+2. SELECT cfu AS `cfu>10`
 FROM university.courses
 WHERE cfu >10
 
-3. 
-SELECT date_of_birth AS `age>30` 
+3. SELECT date_of_birth AS `age>30` 
 FROM university.students
 WHERE YEAR(date_of_birth) <=1995
 
-4. 
-SELECT name, period, year 
+4. SELECT name, period, year 
 FROM university.courses
 WHERE period = "I semestre"
 AND year = 1
 
-5. 
-SELECT id, date, hour, location, address
+5. SELECT id, date, hour, location, address
 FROM university.exams
 WHERE date = "2020-06-20"
 AND HOUR (hour) >=14;
 
-6. 
-SELECT id, name, level 
+6. SELECT id, name, level 
 FROM university.degrees
 WHERE level = "magistrale"
 
-7. 
-SELECT COUNT(*) AS conteggio
+7. SELECT COUNT(*) AS conteggio
 FROM university.departments
 
-8. 
-SELECT id, name, surname, phone
+8. SELECT id, name, surname, phone
 FROM university.teachers
 WHERE phone IS NULL 
