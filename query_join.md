@@ -29,3 +29,19 @@ FROM degrees
 JOIN departments
 ON degrees.department_id = departments.id
 WHERE departments.id = 7 AND level = "magistrale"
+
+3. SELECT courses.id, courses.name, courses.period, courses.year, courses.cfu, teachers.name, teachers.surname
+FROM courses
+JOIN course_teacher
+ON course_teacher.course_id = courses.id
+JOIN teachers
+ON teachers.id = course_teacher.teacher_id
+WHERE teachers.name = "Fulvio"
+
+4. SELECT students.id, students.name, students.surname, degrees.name corso_di_laurea, departments.name dipartimenti
+FROM students
+JOIN degrees
+ON students.degree_id = degrees.id
+JOIN departments
+ON degrees.department_id = departments.id
+ORDER BY students.name, students.surname
